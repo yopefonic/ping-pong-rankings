@@ -1,5 +1,5 @@
 source 'https://rubygems.org'
-ruby "2.0.0"
+ruby "2.1.5"
 
 gem 'rails', '4.1.0'
 
@@ -56,4 +56,4 @@ group :development do
   gem 'debugger' if ENV['pingpongpanda_debugger']
 end
 
-gem 'therubyracer', :require => 'v8'
+gem 'therubyracer', '~> 0.12.2', :require => 'v8'
