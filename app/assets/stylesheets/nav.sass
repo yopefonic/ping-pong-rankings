@@ -5,9 +5,18 @@
 .navbar
   position: relative
   min-height: 45px
-  background: #0082c9
-  border-bottom: 3px solid #4aa9dd
+  background: #000000
   z-index: 200
+  background:
+    image: image-url("logo-left.png")
+    position: 25px center
+    repeat: no-repeat
+    size: contain
+
+  .container
+    padding: 
+      top: 20px
+      bottom: 20px
 
   .brand
     float: left
@@ -16,11 +25,10 @@
     text-decoration: none
     font-size: 1.7em
     font-weight: normal
-    +span-columns(4)
+    +span-columns(5)
 
   .nav-container
-    +span-columns(5)
-    +shift(3)
+    +span-columns(7)
     +tablet
       +shift(0)
       float: none
@@ -39,12 +47,13 @@
         color: #FFF
         text-decoration: none
         font-size: 0.9em
+        font-weight: bold
         display: block
 
         &:hover,
         &.active
           +box-shadow(inset 1px 1px 2px 1px rgba(0, 0, 0, 0.1))
-          background: rgba(0, 0, 0, 0.1)
+          color: #009245
 
 .tabs
   padding: 20px 0 0
@@ -64,5 +73,5 @@
 
     &:hover,
     &.active
-      background: #373737
+      background: #009245
       color: #FFF
