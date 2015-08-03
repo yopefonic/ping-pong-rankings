@@ -29,9 +29,9 @@
               %a{:href => '#'} 11
               %a{:href => '#'} 21
 
-        .buttons
-          %input.btn.add-game{:type => 'submit', :value => '+ Add game'}
-          %input.btn{:type => 'submit', :value => 'Submit score(s)'}
+      .buttons
+        %input.btn.add-game{:type => 'submit', :value => '+ add game'}
+        %input.btn{:type => 'submit', :value => 'submit score(s)'}
 
     %ul.player-list{ :data => { 'team' => 2 } }
       - Player.order('name ASC').each do |player|
@@ -126,7 +126,7 @@
           +'</div>'
     if(gameId <= 7){
       $('.enter-score').append(data);
-    } else {
+    } if(gameId >=7) {
       $(this).addClass('disabled');
     }
     // Set Default Score
