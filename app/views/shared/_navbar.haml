@@ -7,7 +7,7 @@
         %li.nav-item#nav-rankings
           = link_to 'rankings', ranking_players_path, { 'data-content' => 'rankings' }
         %li#nav-newgame
-          = link_to 'record game', '#', { 'data-content' => 'new-game' }
+          = link_to 'new game', '#', { 'data-content' => 'new-game' }
         - if current_player
           %li.nav-item#nav-logout
             = link_to 'log out', sessions_path, method: :delete

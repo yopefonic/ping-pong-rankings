@@ -30,8 +30,8 @@
               %a{:href => '#'} 21
 
       .buttons
-        %input.btn.add-game{:type => 'submit', :value => '+ add game'}
-        %input.btn{:type => 'submit', :value => 'submit score(s)'}
+        %input.btn.add-game{:type => 'submit', :value => '+ game'}
+        %input.btn{:type => 'submit', :value => 'save score(s)'}
 
     %ul.player-list{ :data => { 'team' => 2 } }
       - Player.order('name ASC').each do |player|
