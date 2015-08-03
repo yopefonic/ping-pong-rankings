@@ -52,8 +52,10 @@ PingPong.initRankings = function() {
     function showNewGame(){
         var elm = $('#new-game')
         if(elm.hasClass('hide')){
+            var new_height = $('.navbar').height();
+            new_height = new_height + 'px';
             elm.removeClass('hide');
-            elm.animate({marginTop:'45px'}, 500);
+            elm.animate({marginTop:new_height}, 500);
         } else {
             elm.animate({marginTop:'-1000px'}, 500, function(){;
                 elm.addClass('hide');
