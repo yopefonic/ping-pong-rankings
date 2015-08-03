@@ -5,6 +5,7 @@
     %link{ rel: 'shortcut icon', href: 'http://www.amansys.nl/b-development/wp-content/uploads/2014/10/favicon.png', type: 'image/x-icon' }
     = javascript_include_tag '//ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js'
     = stylesheet_link_tag 'application', media: 'all'
+    %meta{ name: 'viewport', content: 'width=device-width, initial-scale=1' }
     = csrf_meta_tags
   %body.preload
     = render 'shared/navbar'
