@@ -5,12 +5,12 @@
     .nav-container
       %ul.nav
         %li.nav-item#nav-rankings
-          = link_to 'Rankings', ranking_players_path, { 'data-content' => 'rankings' }
+          = link_to 'rankings', ranking_players_path, { 'data-content' => 'rankings' }
         %li#nav-newgame
-          = link_to 'Record Game', '#', { 'data-content' => 'new-game' }
+          = link_to 'record game', '#', { 'data-content' => 'new-game' }
         - if current_player
           %li.nav-item#nav-logout
-            = link_to 'Log out', sessions_path, method: :delete
+            = link_to 'log out', sessions_path, method: :delete
         - else
           %li.nav-item#nav-login
-            = link_to 'Authenticate with Google', '/auth/google_oauth2'
+            = link_to 'authenticate with Google', '/auth/google_oauth2'
