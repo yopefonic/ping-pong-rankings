@@ -10,12 +10,11 @@
 
     .selected
       #team-1.team{ :data => { 'team-id' => 1 } }
-        %h2 Team 1
+        %h2 B.1
         %ul.selected-players
       #team-2.team{ :data => { 'team-id' => 2 } }
-        %h2 Team 2
+        %h2 B.2
         %ul.selected-players
-
       .enter-score
         .game{:data => {:game => '1'}}
           .team
@@ -30,9 +29,9 @@
               %a{:href => '#'} 11
               %a{:href => '#'} 21
 
-      .buttons
-        %input.btn.add-game{:type => 'submit', :value => '+ Add game'}
-        %input.btn{:type => 'submit', :value => 'Submit score(s)'}
+        .buttons
+          %input.btn.add-game{:type => 'submit', :value => '+ Add game'}
+          %input.btn{:type => 'submit', :value => 'Submit score(s)'}
 
     %ul.player-list{ :data => { 'team' => 2 } }
       - Player.order('name ASC').each do |player|

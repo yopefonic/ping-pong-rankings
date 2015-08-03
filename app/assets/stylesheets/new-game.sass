@@ -50,11 +50,8 @@
         +box-shadow(0 0 2px 1px rgba(0, 0, 0, 0.1))
         overflow: hidden
 
-
     .player-list,
     .selected
-      +span-columns(4)
-
       .team
         +span-columns(6)
         +nth-omega(2n)
@@ -66,19 +63,15 @@
 
     // Player list
     .player-list
+      +span-columns(3)
       padding: 60px 0 10px
       
       li
-        +span-columns(5)
-        +nth-omega(2n)
         margin-bottom: 5px
-      
-      &:last-child
-        li:nth-child(2n+1)
-          +shift(2)
 
     // Selected players
     .selected
+      +span-columns(6)
       .selected-players
         height: 240px
         .player
@@ -103,7 +96,7 @@
     .enter-score
       float: left
       +fill-parent
-      padding: 10px 0
+      padding: 10px 0 0
 
       .score
         +span-columns(6)
@@ -132,7 +125,16 @@
     .buttons
       float: left
       +fill-parent
-      padding: 10px 0
+      padding: 10px 0 0
       text-align: center
 
+      .btn
+        margin-bottom: 10px
 
+@media (max-width: 600px)
+  #new-game 
+    .overlay
+      .enter-score
+        .score
+          +span-columns(9)
+          margin-left: 0
