@@ -19,8 +19,6 @@ PingPong.initRankings = function() {
             $('#'+$(this).attr('data-content')).removeClass('hide');
         } if(elmParent.attr('id') == 'nav-newgame'){
             showNewGame()
-        } else if(elmParent.attr('id') == 'nav-fullscreen'){
-            switchFullscreen()
         }
     });
 
@@ -61,10 +59,5 @@ PingPong.initRankings = function() {
                 elm.addClass('hide');
             });
         }
-    }
-    // Switch full screen
-    function switchFullscreen(){
-        var elm = $('.container');
-        elm.toggleClass('fullscreen');
     }
 };
